@@ -19,7 +19,7 @@ archivesBaseName = 'NBTEdit'
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
 minecraft {
-    mappings channel: 'snapshot', version: '20200916-1.16.2'
+    mappings channel: 'snapshot', version: '20201028-1.16.3'
     runs {
         client = {
             workingDirectory project.file('run').canonicalPath
@@ -43,21 +43,21 @@ repositories {
 }
 
 dependencies {
-    compile fg.deobf("blusunrize.immersiveengineering:ImmersiveEngineering:1.16.3-4.0.1-121")
-    minecraft 'net.minecraftforge:forge:1.16.3-34.0.9'
+    compile fg.deobf("blusunrize.immersiveengineering:ImmersiveEngineering:1.16.5-4.2.1-131")
+    minecraft 'net.minecraftforge:forge:1.16.5-36.0.22'
 }
 
 processResources {
     // this will ensure that this task is redone when the versions change.
     inputs.property 'version', project.version
-    inputs.property 'mcversion', '1.14.4'
+    inputs.property 'mcversion', '1.16.5'
 
     // replace stuff in mcmod.info, nothing else
     from(sourceSets.main.resources.srcDirs) {
         include 'META_INF/mods.toml'
 
         // replace version and mcversion
-        expand 'version':project.version, 'mcversion': '1.14.4'
+        expand 'version':project.version, 'mcversion': '1.16.5'
     }
 
     // copy everything else except the mods.toml
