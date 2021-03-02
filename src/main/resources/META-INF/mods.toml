@@ -4,7 +4,7 @@ issueTrackerURL="https://github.com/Burnuts/NBTEdit/issues"
 displayURL="https://github.com/Burnuts/NBTEdit"
 credits="DavidGoldman for the MC 1.7.10-equivalent of this mod"
 authors="Burnuts"
-license="Creative Commons Zero v1.0"
+license="Creative Commons Zero v1.0 Universal"
 [[mods]]
 modId="nbtedit"
 version="0.11.0"
